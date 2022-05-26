@@ -20,7 +20,7 @@ use App\Http\Controllers\ContactsController;
 // Route::get('/contact', [ContactController::class, 'index']);
 // Route::get('/', 'App\Http\Controllers\ContactsController@index')->name(‘contact’);
 
-Route::get('/', [ContactsController::class, 'index'])->name('contact.index');
+Route::get('/', [ContactsController::class, 'index'])->name('contact');
 
 
 // 確認ページ
@@ -28,14 +28,14 @@ Route::get('/', [ContactsController::class, 'index'])->name('contact.index');
 // Route::post('/contact/confirm', [ContactsController::class, 'confirm']);
 // Route::get('/confirm', 'App\Http\Controllers\ContactsController@confirm')->name(‘confirm’);
 
-Route::get('/confirm', [ContactsController::class, 'confirm'])->name('confirm');
+Route::post('/confirm', [ContactsController::class, 'confirm'])->name('confirm');
 
 // DB挿入、メール送信
 // Route::post('/process', 'ContactsController@process')->name('process');
 // Route::post('contact/process', [ContactsController::class, 'process']);
 // Route::get('/process', 'App\Http\Controllers\ContactsController@process')->name(‘process’);
 
-Route::get('/process', [ContactsController::class, 'process'])->name('process');
+Route::post('/process', [ContactsController::class, 'process'])->name('process');
 
 // 完了ページ
 
