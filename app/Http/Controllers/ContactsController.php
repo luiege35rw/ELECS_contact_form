@@ -25,7 +25,7 @@ class ContactsController extends Controller
             'contents' => 'required',
         ]);
 
-        // フォームから受け取ったすべてのinputの値を取得
+        // フォームから受け取ったすべてのinputの値を取得する
         $inputs = $request->all();
 
         return view('contacts.confirm', ['inputs' => $inputs]);
