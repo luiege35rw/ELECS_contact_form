@@ -5,6 +5,11 @@ $title = 'お問い合わせ - 確認';
 @extends('layout')
 
 @section('content')
+<!-- 文字コード変換 -->
+<!-- <form action="http://http://127.0.0.1:8000" accept-charset="Shift_JIS">
+</form> -->
+
+
     <h1 class="text-center mt-2 mb-5">お問い合わせ確認</h1>
     <div class="container">
         {!! Form::open(['route' => 'process', 'method' => 'POST']) !!}
@@ -51,7 +56,7 @@ $title = 'お問い合わせ - 確認';
             
             <div class="text-center">
                 <button name="action" type="submit" value="return" class="btn btn-dark">入力画面に戻る</button>
-                <button name="action" type="submit" value="submit" class="btn btn-primary">送信</button>
+                <button name="action" type="submit" value="submit" class="btn btn-primary"onClick="buff=document.charset; document.charset='UTF-8'; document.form[0].submit(); document.charset=buff;">送信</button>
             </div>
         {!! Form::close() !!}
     </div>

@@ -5,6 +5,11 @@ $title = 'お問い合わせ';
 @extends('layout')
 
 @section('content')
+<!-- 文字コード変換 -->
+<!-- <form action="http://http://127.0.0.1:8000" accept-charset="Shift_JIS">
+</form> -->
+
+
     <h1 class="text-center mt-2 mb-5">お問い合わせ</h1>
     <div class="container">
         {!! Form::open(['route' => 'confirm', 'method' => 'POST']) !!}
