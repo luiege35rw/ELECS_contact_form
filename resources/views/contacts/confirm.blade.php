@@ -15,10 +15,12 @@ $title = 'お問い合わせ - 確認';
 <?php
 mb_language("ja");
 mb_internal_encoding("UTF-8");
+$str_utf8 = $inputs;
+$str = mb_convert_encoding($inputs,"utf-8","sjis"); 
+$str_sjis = mb_convert_encoding($str, "SJIS", "UTF-8");
 mb_convert_encoding($str_sjis, "UTF-8"); // シフトJISからUTF-8に変換
 
-// $str = mb_convert_encoding($inputs,"utf-8","sjis"); 
-// $str_sjis = mb_convert_encoding($str, "SJIS", "UTF-8");
+
 
 // phpinfo();
 ?>
